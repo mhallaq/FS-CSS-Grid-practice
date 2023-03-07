@@ -1,0 +1,144 @@
+@import url("./assets/resetcss.css ");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr) 50px;
+  grid-template-areas:
+    "hero hero hero hero "
+    "hero hero hero hero "
+    "hero hero hero hero "
+    "hero hero hero hero "
+    "section1 section2 section3 section4 "
+    "footer footer footer footer";
+}
+
+.nav-bar {
+  font-size: 0.85em;
+  position: absolute;
+  display: flex;
+  border: #71767d soolid 1px;
+  border-radius: 5px;
+  height: 2em;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, #878d8c, #72777f 50%, #676666);
+
+  color: #d6d6d0;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar ul li {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25em;
+  height: 100%;
+}
+
+.nav-bar ul li:nth-child(n) {
+  border-left: #b3b0b0 groove 0.3px;
+}
+
+.nav-bar ul li:nth-child(1) {
+  border-left: none;
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/images/your_verse_hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 70%;
+  grid-area: hero;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+}
+
+.hero .verse-details {
+  padding: 0 10em;
+  font-size: 1.4em;
+}
+
+.hero .verse-watch {
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+.first-section {
+  grid-area: section1;
+  background-image: url("/assets/images/promo_iphone5s.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.second-section {
+  grid-area: section2;
+  background-image: url("/assets/images/promo_iphone5c.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.third-section {
+  grid-area: section3;
+  background-image: url("/assets/images/promo_30_years.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fourth-section {
+  grid-area: section4;
+  background-image: url("/assets/images/promo_supplier_responsibility.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  font-size: 10px;
+  grid-area: footer;
+  padding: 1em 6em;
+}
+.footer .top-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer .right ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .right ul li:nth-child(n) {
+  border-right: 1px solid black;
+}
+
+.footer .right ul li a {
+  padding: 0 0.4rem;
+}
+.footer .bottom {
+  padding-top: 1em;
+}
